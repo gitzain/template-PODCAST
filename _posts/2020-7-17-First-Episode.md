@@ -1,6 +1,6 @@
 ---
 layout: post
-title: S1E1
+title: "This is a test"
 date: 2015-12-23 14:37:00
 file: //path-to-your/file.mp3
 file_itunes: //path-to-your/file.m4a
@@ -12,4 +12,4 @@ explicit: "yes" #other option is no
 block: "no" #means is shown in itunes
 ---
 
-This is the body of the post v2.
+This is the body of the post v3.
