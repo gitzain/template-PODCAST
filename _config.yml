@@ -84,3 +84,19 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+# Add this section to your _config.yml
+# You may ignore information you already have
+# like title, url and such
+#####################################
+
+# Podcast Feed Settings
+
+title:          your-site-title
+email:          your-podcast-contact-email
+description:    "your-podcast-description"
+subtitle:       "your-podcast-subtitle"
+url:            your-podcast-url
+lang:           your-language-code
+author:         your-name
+copyright:      "&#x2117; &amp; &#xA9; 2015"
