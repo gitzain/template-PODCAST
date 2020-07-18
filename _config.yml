@@ -51,23 +51,6 @@ baseurl: "/template-PODCAST"
 
 
 
-# Add this section to your _config.yml
-# You may ignore information you already have
-# like title, url and such
-#####################################
-
-# Podcast Feed Settings
-
-title:          your-site-title
-email:          your-podcast-contact-email
-description:    "your-podcast-description"
-subtitle:       "your-podcast-subtitle"
-url:            https://gitzain.github.io/template-PODCAST
-lang:           your-language-code
-author:         Zain Khan
-copyright:      "&#x2117; &amp; &#xA9; 2020"
-explicit: "no"
-albumart: {{ site.url }}/images/itunes.png
 
 
 
