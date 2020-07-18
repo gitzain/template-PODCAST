@@ -5,8 +5,8 @@
 # Name of your site/podcast
 name: The Podcast
 
-# Short bio or description (displayed in the header)
-description: Web Developer from Somewhere
+# Short description of your site/podcast
+description: Just another podcast
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
@@ -41,7 +41,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: https://gitzain.github.io/template-podcast
+url: https://gitzain.github.io/template-PODCAST
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
@@ -58,8 +58,8 @@ baseurl: "/template-PODCAST"
 
 # Podcast Feed Settings
 
+summary: Everyone has a podcast these days so why not you? Use this fantasic project to get your podcast up and running with minimal hassle.
 email:          your-podcast-contact-email
-description:    "your-podcast-description"
 subtitle:       "your-podcast-subtitle"
 lang:           en
 author:         Zain Khan
