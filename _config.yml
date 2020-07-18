@@ -66,6 +66,8 @@ url:            https://gitzain.github.io/template-PODCAST
 lang:           your-language-code
 author:         Zain Khan
 copyright:      "&#x2117; &amp; &#xA9; 2020"
+explicit: "no"
+albumart: {{ site.url }}/images/itunes.png
 
 
 
