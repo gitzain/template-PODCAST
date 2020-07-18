@@ -58,6 +58,7 @@ baseurl: "/template-PODCAST"
 
 # Podcast Feed Settings
 
+podcastfeed: {{ site.url }}/podcast.rss
 summary: Everyone has a podcast these days so why not you? Use this fantasic project to get your podcast up and running with minimal hassle.
 email:          your-podcast-contact-email
 subtitle:       "your-podcast-subtitle"
