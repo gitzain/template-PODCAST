@@ -2,8 +2,8 @@
 # This file contains configuration flags to customize your site
 #
 
-# Name of your site (displayed in the header)
-name: Zain Khan
+# Name of your site/podcast
+name: The Podcast
 
 # Short bio or description (displayed in the header)
 description: Web Developer from Somewhere
@@ -58,7 +58,6 @@ baseurl: "/template-PODCAST"
 
 # Podcast Feed Settings
 
-title:          your-site-title
 email:          your-podcast-contact-email
 description:    "your-podcast-description"
 subtitle:       "your-podcast-subtitle"
