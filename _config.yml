@@ -60,7 +60,7 @@ baseurl: "/template-PODCAST"
 
 podcastfeed: /feed/podcast.rss
 summary: Everyone has a podcast these days so why not you? Use this fantasic project to get your podcast up and running with minimal hassle.
-email:          your-podcast-contact-email
+email:          hi@podcast.com
 subtitle:       "your-podcast-subtitle"
 lang:           en
 author:         Zain Khan
