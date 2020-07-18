@@ -41,7 +41,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url:
+url: https://gitzain.github.io/template-PODCAST
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
@@ -51,6 +51,22 @@ baseurl: "/template-PODCAST"
 
 
 
+# Add this section to your _config.yml
+# You may ignore information you already have
+# like title, url and such
+#####################################
+
+# Podcast Feed Settings
+
+title:          your-site-title
+email:          your-podcast-contact-email
+description:    "your-podcast-description"
+subtitle:       "your-podcast-subtitle"
+lang:           en
+author:         Zain Khan
+copyright:      "&#x2117; &amp; &#xA9; 2020"
+explicit: "no"
+albumart: /images/itunes.png
 
 
 
