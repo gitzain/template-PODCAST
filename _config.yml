@@ -74,7 +74,12 @@ itunescategory:   Education
 # !! You don't need to change any of the configuration flags below !!
 #
 
-permalink: /episode/:title/
+permalink: /:title/
+
+collections:
+  my_collection:
+    output: true
+    permalink: /episode/:title/
 
 # The release of Jekyll Now that you're using
 version: v1.2.0
