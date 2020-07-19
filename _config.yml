@@ -68,7 +68,9 @@ explicit:         "no"
 albumart:         /images/albumart.jpg
 itunescategory:   Education
 
-
+# RSS Feed
+plugins:
+  - jekyll-feed
 
 #
 # !! You don't need to change any of the configuration flags below !!
