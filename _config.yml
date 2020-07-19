@@ -58,16 +58,15 @@ baseurl: "/template-PODCAST"
 
 # Podcast Feed Settings
 
-podcastfeed: /feed/podcast.rss
-summary: Everyone has a podcast these days so why not you? Use this fantasic project to get your podcast up and running with minimal hassle.
-email:          hi@podcast.com
-subtitle:       "your-podcast-subtitle"
-lang:           en
-author:         Zain Khan
-copyright:      "&#x2117; &amp; &#xA9; 2020"
-explicit: "no"
-albumart: /images/albumart.jpg
-itunescategory: Education
+podcastfeed:      /feed/podcast.rss
+summary:          Everyone has a podcast these days so why not you? Use this fantasic project to get your podcast up and running with minimal hassle.
+email:            hi@podcast.com
+lang:             en
+author:           Your name
+copyright:        "&#x2117; &amp; &#xA9; 2020"
+explicit:         "no"
+albumart:         /images/albumart.jpg
+itunescategory:   Education
 
 
 
