@@ -77,7 +77,7 @@ itunescategory:   Education
 permalink: /:title/
 
 collections:
-  my_collection:
+  posts:
     output: true
     permalink: /episode/:title/
 
