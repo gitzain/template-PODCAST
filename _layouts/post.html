@@ -13,7 +13,10 @@ layout: default
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
 
-  {{ page.file }}
+  <audio controls>
+    <source src="https://{{ page.file }}" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
 
   {% include disqus.html %}
 </article>
