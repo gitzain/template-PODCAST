@@ -68,13 +68,6 @@ explicit:         "no"
 albumart:         /images/albumart.jpg
 itunescategory:   Education
 
-# RSS Feed
-plugins:
-  - jekyll-feed
-
-feed:
-  path: atom.xml
-
 #
 # !! You don't need to change any of the configuration flags below !!
 #
