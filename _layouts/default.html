@@ -69,12 +69,6 @@
                 width: 350px;
                 height: 350px;
 }
-
-
-
-
-
-
 		</style>
 	</head>
 	<body>
@@ -114,11 +108,18 @@
 				</div>
 			</div>
 		</section>
+
 		<!-- Content Section-->
-        <div id="main" role="main" class="container">
-            {{ content }}
-          </div>
-		<!--footer-->
+		<section class="py-6">
+			<div class="container">
+				{{ content }}
+			</div>
+		</section>
+
+
+
+		
+		<!--Footer Section  -->
 		<footer class="py-6 bg-light">
 			<div class="container">
 				<div class="row justify-content-between">
@@ -145,6 +146,7 @@
 				</div>
 			</div>
 		</footer>
+
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
@@ -153,7 +155,8 @@
 		<script src="js/scripts.js"></script>
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		
         {% include analytics.html %}
 	</body>
 </html>
