@@ -75,69 +75,31 @@
 		<!--Header Section-->
 		<section class="bg-gradient pt-5 pb-6">
 			<div class="container">
-				<div class="row">
-					<div class="col-12 d-flex flex-row align-items-center justify-content-between">
-						<div class="heading-brand">Podcast</div>
-						<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-							<div class="btn-group" role="group">
-								<button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Subscribe <i class="fa fa-rss" aria-hidden="true"></i>
-								</button>
-								<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-									<h6 class="dropdown-header">Platform</h6>
-									<a class="dropdown-item" href="#"><i class="fa fa-apple" aria-hidden="true"></i> iTunes</a>
-									<a class="dropdown-item" href="#"><i class="fa fa-google" aria-hidden="true"></i> Google Play Music</a>
-									<a class="dropdown-item" href="#"><i class="fa fa-spotify" aria-hidden="true"></i> Spotify</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+
+				<!--Navbar-->
+				{% include navbar.html %}
+				
+				<!--Header-->
 				<div class="row mt-6 justify-content-center">
 					<div class="col-md-4">
 						<div class="albumart"></div>
 					</div>
 					<div class="col-md-4 my-auto">
-						<h1 class="mb-0">Podcast Title</h1>
-						<p class="lead">Lorem sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<a href="https://github.com/LeaVerou/prism/" class="btn btn-success svg-icon">
-						<em class="mr-2" data-feather="play"></em>
-						Latest Episode
-						</a>
+						<h1 class="mb-0">{{ site.name }}</h1>
+						<p class="lead">{{ site.description }}</p>
+						<a href="#" class="btn btn-success svg-icon"><em class="mr-2" data-feather="play"></em> Latest Episode</a>
 					</div>
 				</div>
+
 			</div>
 		</section>
 
 		<!-- Content Section-->
-		<section class="py-6">
-			<div class="container">
-				{{ content }}
-			</div>
-		</section>
+		{{ content }}
 
 
-
-		
 		<!--Footer Section  -->
-		<footer class="py-6 bg-light">
-			<div class="container">
-				<div class="row justify-content-between">
-					<div class="col-md-4">
-						<h3 class="text-black">Podcast</h3>
-						<p>© 2020 Podcast. All Rights Reserved.</p>
-					</div>
-					<div class="col-md-4 text-right my-auto">
-
-						{% include social-icons.html %}
-
-						<p class="text-muted small text-uppercase mt-4">
-							Follow us on social media
-						</p>
-					</div>
-				</div>
-			</div>
-		</footer>
+		{% include footer.html %}
 
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
