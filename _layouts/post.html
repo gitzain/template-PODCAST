@@ -2,21 +2,46 @@
 layout: default
 ---
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
+		<!--Header Section-->
+		<section class="bg-gradient pt-5 pb-6">
+			<div class="container">
 
-  <audio controls>
-    <source src="https://{{ page.file }}" type="audio/mpeg">
-      Your browser does not support the audio element.
-  </audio>
+				<!--Navbar-->
+				{% include navbar.html %}
+				
+				<!--Header-->
+				<div class="row mt-6 justify-content-center">
+					<div class="col-md-4">
+						<div class="albumart"></div>
+					</div>
+					<div class="col-md-4 my-auto">
+						<h1 class="mb-0">{{ page.title }}</h1>
+						<p class="lead">{{ page.summary }}</p>
+						<a href="#" class="btn btn-success svg-icon"><em class="mr-2" data-feather="play"></em> Play Episode</a>
+					</div>
+				</div>
 
-  <div class="entry">
-    {{ content }}
-  </div>
+			</div>
+		</section>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
+    <section class="py-6">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md-8">
+              <audio controls>
+                <source src="https://{{ page.file }}" type="audio/mpeg">
+                  Your browser does not support the audio element.
+              </audio>
+                  <h2 class="text-center text-md-left mb-0">{{ post.title }}</h2>
+                  <p class="text-muted">{{ page.date | date: "%B %e, %Y" }}</p>
 
-  {% include disqus.html %}
-</article>
+                  <div class="date">
+                    Written on {{ page.date | date: "%B %e, %Y" }}
+                  </div>
+                
+                  {% include disqus.html %}
+
+          </div>
+        </div>
+      </div>
+    </section>
