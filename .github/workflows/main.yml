@@ -28,8 +28,8 @@ jobs:
     - name: Write new tags
       run: python scripts/write_mp3_tags.py new
 
-    - name: Move files to final location
-      run: 
+    #- name: Move files to final location
+    #  run: 
 
-    - name: Check the files in and push
-      run: 
+    #- name: Check the files in and push
+    #  run: 
