@@ -24,5 +24,5 @@ for fn in os.listdir(fpath):
             print('ok!')
         except:
             print('no ID3 tag')
-            
+
 print('Done')
