@@ -12,13 +12,14 @@ layout: default
 				<!--Header-->
 				<div class="row mt-6 justify-content-center">
 					<div class="col-md-4">
-						<div class="albumart"></div>
+						<img src="{{ site.baseurl }}/images/albumart.jpg" class="img-fluid albumart" alt="Albumart">
 					</div>
 					<div class="col-md-4 my-auto">
 						<h1 class="mb-0">{{ site.name }}</h1>
 						<p class="lead">{{ site.description }}</p>
-						<a href="#" class="btn btn-success svg-icon"><em class="mr-2" data-feather="play"></em> Latest Episode</a>
-					</div>
+						<button id="play" type="button" class="btn btn-success"><i class="fa fa-play" aria-hidden="true"> </i> 
+							Latest Episode</button>
+						</div>
 				</div>
 
 			</div>
