@@ -21,6 +21,68 @@ layout: default
 					</div>
 				</div>
 
+
+
+				<style>
+					.play-overlay {
+					position: relative;
+					display: inline-block;
+					}
+					.overlay-button-icon {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					font-size: 80pt;
+					transform: translate(-50%, -50%);
+					opacity: 0.8;
+					}
+					#pause {
+					display: none;
+					}
+				</style>
+
+
+				<div class="row mt-6 justify-content-center">
+					<div class="col-md-3 my-auto">
+						<div class="play-overlay">
+							<img src="images/albumart.jpg" class="img-fluid albumart" alt="Albumart">
+							<a id="audioControl" href="#">
+								<div class="overlay-button-icon" id="play"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+								<div class="overlay-button-icon" id="pause"><i class="fa fa-pause-circle" aria-hidden="true"></i></div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-5 my-auto">
+						<p class="mb-0">{{ page.date | date: "%B %e, %Y" }}</p>
+						<h1 class="mb-0">{{ page.title }}</h1>
+						<p class="lead">{{ page.summary }}</p>
+						<div class="audio-player">
+							<div class="audio-wrapper" id="player-container" href="javascript:;">
+								<audio id="player" ontimeupdate="initProgressBar()">
+									<source src="https://{{ page.file }}" type="audio/mp3">
+								</audio>
+							</div>
+							<div class="row player-controls scrubber">
+								<small id="start-time" class="col-md-auto">00:00</small>
+								<span id="seek-obj-container" class="col p-0 progress">
+									<div id="seek-obj" class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+								</span>
+								<small id="end-time" class="col-md-auto text-right">00:00</small>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
 			</div>
 		</section>
 
@@ -45,3 +107,115 @@ layout: default
         </div>
       </div>
     </section>
+
+
+    <!--Content section-->
+		<section class="py-6">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col-md-8">
+						{{ content }}
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+    <!-- Scripts needed for this page -->
+    <script>
+			function initProgressBar() {
+			  var player = document.getElementById('player');
+			  var length = player.duration
+			  var current_time = player.currentTime;
+			
+			  // calculate total length of value
+			  var totalLength = calculateTotalValue(length)
+			  document.getElementById("end-time").innerHTML = totalLength;
+			
+			  // calculate current value time
+			  var currentTime = calculateCurrentValue(current_time);
+			  document.getElementById("start-time").innerHTML = currentTime;
+			
+			  var progressbar = document.getElementById('seek-obj');
+			  $('#seek-obj').attr('aria-valuenow', (player.currentTime / player.duration) * 100);
+			  progressbar.style.width =  (player.currentTime / player.duration) * 100 + '%';
+			
+			
+			  var bb = document.getElementById('seek-obj-container');
+			  bb.addEventListener("click", seek);
+			
+			  function seek(event) {
+			    var percent = event.offsetX / this.offsetWidth;
+			    player.currentTime = percent * player.duration;
+				$('#seek-obj').attr('aria-valuenow', percent);
+				progressbar.style.width =  (percent) + '%';
+			  }
+			};
+			
+			function initPlayer() {
+			      // Variables
+			      // ----------------------------------------------------------
+			      // audio embed object
+			      var playerContainer = document.getElementById('player-container'),
+			        player = document.getElementById('player'),
+					ctrl = document.getElementById('audioControl'),
+			        isPlaying = false,
+			        playBtn = document.getElementById('play');
+					pauseBtn = document.getElementById('pause');
+			
+			      // Controls Listeners
+			      // ----------------------------------------------------------
+				  ctrl.onclick = function () {
+			
+					if (player.paused) {
+						player.play();
+					} else {
+						player.pause();
+					}
+			
+					togglePlay();
+			
+					// Prevent Default Action
+					return false;
+					};
+			
+			
+			
+			
+			      // Controls & Sounds Methods
+			      // ----------------------------------------------------------
+			      function togglePlay() {
+					if (playBtn.style.display === 'none') {
+						playBtn.style.display = 'block';
+			        	pauseBtn.style.display = 'none';
+			    } else {
+			        	playBtn.style.display = 'none';
+			        	pauseBtn.style.display = 'block';
+			    }
+			      }
+			
+			}
+			
+			function calculateTotalValue(length) {
+			  var minutes = Math.floor(length / 60),
+			    seconds_int = length - minutes * 60,
+			    seconds_str = seconds_int.toString(),
+			    seconds = seconds_str.substr(0, 2),
+			    time = minutes + ':' + seconds
+			
+			  return time;
+			}
+			
+			function calculateCurrentValue(currentTime) {
+			  var current_hour = parseInt(currentTime / 3600) % 24,
+			    current_minute = parseInt(currentTime / 60) % 60,
+			    current_seconds_long = currentTime % 60,
+			    current_seconds = current_seconds_long.toFixed(),
+			    current_time = (current_minute < 10 ? "0" + current_minute : current_minute) + ":" + (current_seconds < 10 ? "0" + current_seconds : current_seconds);
+			
+			  return current_time;
+			}
+			
+			initPlayer()
+					  
+		</script>
