@@ -1,6 +1,23 @@
 ---
 layout: default
 ---
+<style>
+	.play-overlay {
+	position: relative;
+	display: inline-block;
+	}
+	.overlay-button-icon {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-size: 80pt;
+	transform: translate(-50%, -50%);
+	opacity: 0.8;
+	}
+	#pause {
+	display: none;
+	}
+</style>
 
 		<!--Header Section-->
 		<section class="bg-gradient pt-5 pb-6">
@@ -8,40 +25,8 @@ layout: default
 
 				<!--Navbar-->
 				{% include navbar.html %}
-				
-				<!--Header-->
-				<div class="row mt-6 justify-content-center">
-					<div class="col-md-4">
-						<div class="albumart"></div>
-					</div>
-					<div class="col-md-4 my-auto">
-						<h1 class="mb-0">{{ page.title }}</h1>
-						<p class="lead">{{ page.summary }}</p>
-						<a href="#" class="btn btn-success svg-icon"><em class="mr-2" data-feather="play"></em> Play Episode</a>
-					</div>
-				</div>
 
-
-
-				<style>
-					.play-overlay {
-					position: relative;
-					display: inline-block;
-					}
-					.overlay-button-icon {
-					position: absolute;
-					left: 50%;
-					top: 50%;
-					font-size: 80pt;
-					transform: translate(-50%, -50%);
-					opacity: 0.8;
-					}
-					#pause {
-					display: none;
-					}
-				</style>
-
-
+				<!--Header / Audio player -->
 				<div class="row mt-6 justify-content-center">
 					<div class="col-md-3 my-auto">
 						<div class="play-overlay">
@@ -74,40 +59,8 @@ layout: default
 				</div>
 
 
-
-
-
-
-
-
-
-
-
 			</div>
 		</section>
-
-    <section class="py-6">
-      <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="col-md-8">
-              <audio controls>
-                <source src="https://{{ page.file }}" type="audio/mpeg">
-                  Your browser does not support the audio element.
-              </audio>
-                  <h2 class="text-center text-md-left mb-0">{{ post.title }}</h2>
-                  <p class="text-muted">{{ page.date | date: "%B %e, %Y" }}</p>
-
-                  <div class="date">
-                    Written on {{ page.date | date: "%B %e, %Y" }}
-                  </div>
-                
-                  {% include disqus.html %}
-
-          </div>
-        </div>
-      </div>
-    </section>
-
 
     <!--Content section-->
 		<section class="py-6">
