@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Prism - Bootstrap 4 Open Source Landing Page Template</title>
+		<meta name="description" content="Prism is a beautiful Bootstrap 4 template for open-source landing pages."/>
+		<!--Fonts-->
+		<link href="https://fonts.googleapis.com/css?family=K2D:300,400,500,700,800" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Styles -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<style>
+			/*social icons*/
+			.social a {
+			width: 45px;
+			height: 45px;
+			display: block;
+			text-align: center;
+			border-radius: 4px;
+			font-size: 18px;
+			line-height: 45px; }
+			.social a:hover {
+			background: #000000;
+			color: #ffffff;
+			transition: all .4s ease-in-out; }
+			.social.social-dark a {
+			background: rgba(0, 0, 0, 0.6); }
+			.social.social-dark a:hover {
+			background: #000000; }
+			.social.social-inverse a { }
+			.social.social-inverse a:hover {
+			background: #000000;
+			color: #ffffff; }
+			.social.social-sm a {
+			width: 35px;
+			height: 35px;
+			font-size: 16px;
+			line-height: 35px; }
+			.social.social-rounded a {
+			border-radius: 50%; }
+			.social.social-white a {
+			background: #ffffff;
+			color: rgba(73, 80, 87, 0.7); }
+			.social.social-white a:hover {
+			color: #000000; }
+			.social.social-white-alt a {
+			background: #ffffff;
+			color: rgba(73, 80, 87, 0.7); }
+			.social.social-white-alt a:hover {
+			background: #000000;
+			color: #ffffff; }
+			.dropdown-toggle::after {
+			display: none;
+			}
+			.albumart {    
+			border-radius: .45rem;
+			box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.1);
+			}
+		</style>
+
+		<style>
+			.play-overlay {
+			position: relative;
+			display: inline-block;
+			}
+			.overlay-button-icon {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			font-size: 80pt;
+			transform: translate(-50%, -50%);
+			opacity: 0.8;
+			}
+			#pause {
+			display: none;
+			}
+		</style>
+
+	</head>
+	<body>
+		<!--Header Section-->
+		<section class="bg-gradient pt-5 pb-6">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-12 d-flex flex-row align-items-center justify-content-between">
+						<div class="heading-brand">Podcast</div>
+						<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+							<div class="btn-group" role="group">
+								<button id="btnGroupDrop1" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Subscribe <i class="fa fa-rss" aria-hidden="true"></i>
+								</button>
+								<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+									<h6 class="dropdown-header">Platform</h6>
+									<a class="dropdown-item" href="#"><i class="fa fa-apple" aria-hidden="true"></i> iTunes</a>
+									<a class="dropdown-item" href="#"><i class="fa fa-google" aria-hidden="true"></i> Google Play Music</a>
+									<a class="dropdown-item" href="#"><i class="fa fa-spotify" aria-hidden="true"></i> Spotify</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-6 justify-content-center">
+					<div class="col-md-3 my-auto">
+						<div class="play-overlay">
+							<img src="images/albumart.jpg" class="img-fluid albumart" alt="Albumart">
+							<a id="audioControl" href="#">
+								<div class="overlay-button-icon" id="play"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+								<div class="overlay-button-icon" id="pause"><i class="fa fa-pause-circle" aria-hidden="true"></i></div>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-5 my-auto">
+						<p class="mb-0">1st February 2020</p>
+						<h1 class="mb-0">Podcast Title</h1>
+						<p class="lead">Lorem sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<div class="audio-player">
+							<div class="audio-wrapper" id="player-container" href="javascript:;">
+								<audio id="player" ontimeupdate="initProgressBar()">
+									<source src="test.mp3" type="audio/mp3">
+								</audio>
+							</div>
+							<div class="row player-controls scrubber">
+								<small id="start-time" class="col-md-auto">00:00</small>
+								<span id="seek-obj-container" class="col p-0 progress">
+									<div id="seek-obj" class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+								</span>
+								<small id="end-time" class="col-md-auto text-right">00:00</small>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!--Used By Section-->
+		<section class="py-6">
+			<div class="container">
+				<div class="row justify-content-md-center">
+					<div class="col-md-8">
+						<h2 class="">Chapter Markers</h2>
+						<p class="lead muted">00:47- News<br>01:27 – Now Ole has face the big boys should he be given the job<br>09:26 – Having seen the players played for multiple manager we’re in a better position to judge who needs to stay and who needs to go<br>17:06 – How do we strengthen?<br>26:02 – Is 4th realistic and how likely are we to win the FA Cup<br>30:21 – Closing statements </p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+
+		<!--footer-->
+		<footer class="py-6 bg-light">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-md-4">
+						<h3 class="text-black">Podcast</h3>
+						<p>© 2020 Podcast. All Rights Reserved.</p>
+					</div>
+					<div class="col-md-4 text-right my-auto">
+						<ul class="list-inline social social-inverse social-rounded social-sm">
+							<li class="list-inline-item">
+								<a href=""><i class="fa fa-facebook"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href=""><i class="fa fa-twitter"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href=""><i class="fa fa-linkedin"></i></a>
+							</li>
+						</ul>
+						<p class="text-muted small text-uppercase mt-4">
+							Follow us on social media
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		
+		<!-- Optional Scripts -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<script>
+			function initProgressBar() {
+			  var player = document.getElementById('player');
+			  var length = player.duration
+			  var current_time = player.currentTime;
+			
+			  // calculate total length of value
+			  var totalLength = calculateTotalValue(length)
+			  document.getElementById("end-time").innerHTML = totalLength;
+			
+			  // calculate current value time
+			  var currentTime = calculateCurrentValue(current_time);
+			  document.getElementById("start-time").innerHTML = currentTime;
+			
+			  var progressbar = document.getElementById('seek-obj');
+			  $('#seek-obj').attr('aria-valuenow', (player.currentTime / player.duration) * 100);
+			  progressbar.style.width =  (player.currentTime / player.duration) * 100 + '%';
+			
+			
+			  var bb = document.getElementById('seek-obj-container');
+			  bb.addEventListener("click", seek);
+			
+			  function seek(event) {
+			    var percent = event.offsetX / this.offsetWidth;
+			    player.currentTime = percent * player.duration;
+				$('#seek-obj').attr('aria-valuenow', percent);
+				progressbar.style.width =  (percent) + '%';
+			  }
+			};
+			
+			function initPlayer() {
+			      // Variables
+			      // ----------------------------------------------------------
+			      // audio embed object
+			      var playerContainer = document.getElementById('player-container'),
+			        player = document.getElementById('player'),
+					ctrl = document.getElementById('audioControl'),
+			        isPlaying = false,
+			        playBtn = document.getElementById('play');
+					pauseBtn = document.getElementById('pause');
+			
+			      // Controls Listeners
+			      // ----------------------------------------------------------
+				  ctrl.onclick = function () {
+			
+					if (player.paused) {
+						player.play();
+					} else {
+						player.pause();
+					}
+			
+					togglePlay();
+			
+					// Prevent Default Action
+					return false;
+					};
+			
+			
+			
+			
+			      // Controls & Sounds Methods
+			      // ----------------------------------------------------------
+			      function togglePlay() {
+					if (playBtn.style.display === 'none') {
+						playBtn.style.display = 'block';
+			        	pauseBtn.style.display = 'none';
+			    } else {
+			        	playBtn.style.display = 'none';
+			        	pauseBtn.style.display = 'block';
+			    }
+			      }
+			
+			}
+			
+			function calculateTotalValue(length) {
+			  var minutes = Math.floor(length / 60),
+			    seconds_int = length - minutes * 60,
+			    seconds_str = seconds_int.toString(),
+			    seconds = seconds_str.substr(0, 2),
+			    time = minutes + ':' + seconds
+			
+			  return time;
+			}
+			
+			function calculateCurrentValue(currentTime) {
+			  var current_hour = parseInt(currentTime / 3600) % 24,
+			    current_minute = parseInt(currentTime / 60) % 60,
+			    current_seconds_long = currentTime % 60,
+			    current_seconds = current_seconds_long.toFixed(),
+			    current_time = (current_minute < 10 ? "0" + current_minute : current_minute) + ":" + (current_seconds < 10 ? "0" + current_seconds : current_seconds);
+			
+			  return current_time;
+			}
+			
+			initPlayer()
+					  
+		</script>
+	</body>
+</html>
