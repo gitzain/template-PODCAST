@@ -1,0 +1,60 @@
+/*social icons*/
+.social a {
+    width: 45px;
+    height: 45px;
+    display: block;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 45px;
+}
+.social a:hover {
+    background: #000000;
+    color: #ffffff;
+    transition: all .4s ease-in-out;
+}
+.social.social-dark a {
+    background: rgba(0, 0, 0, 0.6);
+}
+.social.social-dark a:hover {
+    background: #000000;
+}
+.social.social-inverse a {
+}
+.social.social-inverse a:hover {
+    background: #000000;
+    color: #ffffff;
+}
+.social.social-sm a {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    line-height: 35px;
+}
+.social.social-rounded a {
+    border-radius: 50%;
+}
+.social.social-white a {
+    background: #ffffff;
+    color: rgba(73, 80, 87, 0.7);
+}
+.social.social-white a:hover {
+    color: #000000;
+}
+.social.social-white-alt a {
+    background: #ffffff;
+    color: rgba(73, 80, 87, 0.7);
+}
+.social.social-white-alt a:hover {
+    background: #000000;
+    color: #ffffff;
+}
+.dropdown-toggle::after {
+    display: none;
+}
+
+/*album art*/
+.albumart {
+    border-radius: .45rem;
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.1);
+}
