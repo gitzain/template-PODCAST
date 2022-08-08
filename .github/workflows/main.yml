@@ -35,10 +35,10 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
     #- name: Clear the mp3s tags
-    #  run: python scripts/clear_mp3_tags.py new
+    #  run: python scripts/clear_mp3_tags.py sandpit/new
 
     - name: Write new tags
-      run: python scripts/write_mp3_tags.py new
+      run: python scripts/write_mp3_tags.py sandpit/new
 
     #- name: Move files to final location
     #  run: 
