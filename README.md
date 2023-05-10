@@ -1,5 +1,5 @@
 # template-PODCAST
-A webiste template designed such that you can just clone it and used it to host your podcast
+A webiste template designed such that you can just clone it and used it to host your podcast.
 
 ## Table of content
 
